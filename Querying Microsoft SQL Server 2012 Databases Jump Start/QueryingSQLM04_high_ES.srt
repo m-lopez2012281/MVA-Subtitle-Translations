@@ -690,115 +690,115 @@ posteriores funcionan en ese grupo, no de la fila de origen. Así que se va
 
 174
 00:10:22,483 --> 00:10:26,300
-a trabajar sobre la información del grupo. And that's why that order
+a trabajar sobre la información del grupo. Y es por eso que el orden 
 
 175
 00:10:26,383 --> 00:10:29,466
-is important to understand here. This one here is actually just
+es importante entender aquí. Éste aquí realmente 
 
 176
 00:10:29,483 --> 00:10:34,466
-getting a count. It's going to display it as a count as the header
+consigue sólo una cuenta. Se va a mostrar como cuenta como el encabezado
 
 177
 00:10:34,483 --> 00:10:37,466
-for it. And we're going to group by customer ID. So we're trying
+por ella. Y vamos al grupo por ID de cliente. Por lo que estamos tratando
 
 178
 00:10:37,483 --> 00:10:40,466
-to see how many customers that we have, we're going to group
+de ver cómo muchos clientes que tenemos, vamos al grupo por ID 
 
 179
 00:10:40,483 --> 00:10:44,466
-by customer ID. And then the second statement here, the aggregate
+de cliente. Y luego la segunda declaración aquí, la función 
 
 180
 00:10:44,483 --> 00:10:47,466
-function is going to refer to any columns, not just those in
+de agregado para referirse a las columnas, no sólo 
 
 181
 00:10:47,483 --> 00:10:50,466
-the group by clause. So we're going to select product ID, max
+los del grupo por cláusula. Así que vamos a seleccionar la ID del producto, cantidad de la orden máxima
 
 182
 00:10:50,483 --> 00:10:55,266
-order quantity as the largest order. So when we run this, we're
+ como la orden más grande. Así que cuando ejecutamos esto,
 
 183
 00:10:55,350 --> 00:10:58,466
-going to group it by product ID. So for each product ID we're
+ vamos a agrupar por ID de producto. Así para cada identificador de producto que 
 
 184
 00:10:58,483 --> 00:11:02,316
-going to see the maximum number of items ordered per product.
+vamos a ver el máximo número de elementos ordenados por producto.
 
 185
 00:11:02,400 --> 00:11:06,366
-So this allows us to use that max aggregate function to be able
+SAsí que esto nos permite usar esa función de agregado máximo 
 
 186
 00:11:06,450 --> 00:11:08,433
-to return that content to us.
+para poder retomar ese contenido.
 
 187
 00:11:09,333 --> 00:11:13,450
-The having clause provides a search condition that every group
+La cláusula que tiene proporciona una condición de búsqueda que debe cumplir
 
 188
 00:11:13,483 --> 00:11:17,466
-in the group by clause must meet. And this is processed after
+cada grupo en el grupo por cláusula. Y esto es tratado después 
 
 189
 00:11:17,483 --> 00:11:20,466
-the group by. So what we're going to do is we're going to select
+del grupo. Así que lo que vamos a hacer es que vamos a seleccionar
 
 190
 00:11:20,483 --> 00:11:24,466
-customer ID and we're going to do a count as count orders from
+el ID de cliente y vamos a hacer una cuenta como cuenta pedidos de
 
 191
 00:11:24,483 --> 00:11:28,466
-the sales order header table. We're going to group by customer ID.
+la tabla de cabecera de pedido de ventas. Vamos al grupo por ID de cliente.
 
 192
 00:11:28,483 --> 00:11:30,466
-And then we're going to say, oh, all those that are group by
+Y entonces vamos a decir, oh, todos los grupo por 
 
 193
 00:11:30,483 --> 00:11:33,466
-customer ID, once that group is created for each customer ID,
+ID de cliente, una vez que ese grupo se crea para cada ID de cliente,
 
 194
 00:11:34,483 --> 00:11:37,466
-having a count greater than 10, so if we have less than 10 we
+tener una cuenta de mayor que 10, por lo que si tenemos menos de 10
 
 195
 00:11:37,483 --> 00:11:40,466
-don't want to really see much about that customer, we want to
+queremos realmente mucho acerca de que el cliente, queremos que 
 
 196
 00:11:40,483 --> 00:11:44,466
-see only those items that are returned to us, those rows returned
+sólo los elementos que vuelven a nosotros, esas filas devuelven 
 
 197
 00:11:44,200 --> 00:11:48,466
-to us in those groups, that are greater than 10. So we'll do
+a nosotros en los grupos , que son mayores que 10.  
 
 198
 00:11:48,483 --> 00:11:51,466
-a count on those customer IDs that are returned to us and then
+Un recuento sobre los identificadores de cliente que vuelven a nosotros y 
 
 199
 00:11:51,483 --> 00:11:54,466
-we'll return the result set with those items that have more than
+entonces nos volveremos el conjunto de resultados con los elementos que tienen más
 
 200
 00:11:54,483 --> 00:12:00,466
-10 in that count return... the count orders field to be more
+de 10 que se pueden regresar... el recuento de las órdenes de campo para ser más 
 
 201
 00:12:00,483 --> 00:12:01,466
-specific here.
+específicos aquí.
 
 202
 00:12:02,483 --> 00:12:05,466
