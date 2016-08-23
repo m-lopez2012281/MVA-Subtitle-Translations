@@ -802,11 +802,11 @@ específicos aquí.
 
 202
 00:12:02,483 --> 00:12:05,466
-If I want to compare... so we talked... the having and the where
+Si quiero comparar... así hablamos... El tener y donde 
 
 203
 00:12:05,483 --> 00:12:08,466
-are similar, but what's... I want to compare the two. The where
+son similares, pero lo... I want to compare the two. The where
 
 204
 00:12:08,483 --> 00:12:13,466
